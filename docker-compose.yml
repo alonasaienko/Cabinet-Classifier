@@ -1,0 +1,12 @@
+services:
+  classifier:
+    build:
+      context: .
+      dockerfile: Dockerfile.gpu
+    shm_size: '4gb' 
+    volumes:
+      - .:/app
+      - ./data:/app/data
+      - ./annotated_pdfs_and_data:/app/annotated_pdfs_and_data
+    environment:
+      - PYTHONPATH=/app
