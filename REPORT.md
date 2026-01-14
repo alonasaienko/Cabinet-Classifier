@@ -13,6 +13,22 @@ I built a simple baseline image classifier for cabinet crops using a pretrained 
 - **Augmentation Experiments**: Tested various strategies including RandomInvert and small-angle rotations, but converged on discrete 90° rotations and flips as they yielded the best stability.
 - **Class imbalance handling**: WeightedRandomSampler in the training loader.
 
+## Detailed Performance Analysis
+
+The final model achieved an overall accuracy of **~90%** on the validation set. However, a deeper look at the Confusion Matrix reveals distinct behaviors for different class types:
+
+### 1. The "Wall vs. Base" Ambiguity
+The primary source of error lies in distinguishing **Wall Cabinets (`lc:wcabo`)** from **Base Cabinets (`lc:bcabo`)**.
+* **Observation:** Out of 31 validation samples for `lc:wcabo`, **12 were misclassified** as `lc:bcabo` (Base cabinets). This accounts for nearly all errors in the model.
+* **Root Cause:** Visually, these classes are nearly identical in top-down/front CAD views. The main differentiator is often a dashed line style (indicating "overhead") vs. a solid line. Even with high-res PDF rendering, convolutional downsampling (to 224x224 or 512x512) can blur the gaps in dashed lines, making them appear solid to the feature extractor.
+* **Impact:** The model defaults to the majority class (`bcabo`) when the visual signal (dashed line) is weak.
+
+### 2. Success on Minority Classes (The "Cubbie" Win)
+Despite the severe class imbalance (only 4-18 samples for some classes), the model achieved **100% accuracy** on:
+* `lc:muscabinso` (9/9 correct)
+* `lc:wcabcub` (18/18 correct)
+* `lc:bcabocub` (1/1 correct)
+
 ## Why These Choices
 - **ResNet-18** is lightweight and stable for quick iteration.
 - **SquarePad + resize** reduces distortion of thin blueprint lines.
