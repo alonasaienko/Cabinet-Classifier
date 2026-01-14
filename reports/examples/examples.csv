@@ -1,0 +1,13 @@
+type,file,true,pred,score,source_image,bbox
+correct,001_correct_true-lc:bcabo_pred-lc:bcabo_p0.52.png,lc:bcabo,lc:bcabo,0.5183,M0695 Full Set/M0695 Full Set_original.pdf#page=1,"1002,6256,242,217"
+correct,002_correct_true-lc:muscabinso_pred-lc:muscabinso_p0.88.png,lc:muscabinso,lc:muscabinso,0.8755,R0213/R0213_original.pdf#page=5,"6898,7743,259,701"
+correct,003_correct_true-lc:wcabcub_pred-lc:wcabcub_p0.91.png,lc:wcabcub,lc:wcabcub,0.9096,Q0422 Purchase Set/Q0422 Purchase Set_original.pdf#page=1,"6452,777,367,263"
+correct,004_correct_true-lc:bcabo_pred-lc:bcabo_p0.64.png,lc:bcabo,lc:bcabo,0.6382,M0695 Full Set/M0695 Full Set_original.pdf#page=1,"5431,6256,238,217"
+correct,005_correct_true-lc:bcabo_pred-lc:bcabo_p0.84.png,lc:bcabo,lc:bcabo,0.8414,R0364 - Doug Adams Stadium/R0364 - Doug Adams Stadium_original.pdf#page=0,"6927,3948,234,296"
+correct,006_correct_true-lc:bcabo_pred-lc:bcabo_p0.86.png,lc:bcabo,lc:bcabo,0.8610,R0364 - Doug Adams Stadium/R0364 - Doug Adams Stadium_original.pdf#page=0,"5881,3948,234,296"
+incorrect,007_incorrect_true-lc:wcabo_pred-lc:wcabcub_p0.37.png,lc:wcabo,lc:wcabcub,0.3682,R0227 Purchase Set/R0227 Purchase Set_original.pdf#page=4,"6127,5772,425,368"
+incorrect,008_incorrect_true-lc:bcabo_pred-lc:muscabinso_p0.46.png,lc:bcabo,lc:muscabinso,0.4563,R0212 Purchase set/R0212 Purchase set_original.pdf#page=1,"2614,2427,226,392"
+incorrect,009_incorrect_true-lc:wcabo_pred-lc:bcabo_p0.50.png,lc:wcabo,lc:bcabo,0.5038,R0090 Purchase Set/R0090 Purchase Set_original.pdf#page=8,"1243,306,172,159"
+incorrect,010_incorrect_true-lc:wcabo_pred-lc:bcabo_p0.64.png,lc:wcabo,lc:bcabo,0.6448,Q0422 Purchase Set/Q0422 Purchase Set_original.pdf#page=1,"8952,2314,313,368"
+incorrect,011_incorrect_true-lc:wcabo_pred-lc:muscabinso_p0.46.png,lc:wcabo,lc:muscabinso,0.4589,Q0194 - Arch Drawings/Q0194 - Arch Drawings_original.pdf#page=17,"7368,7777,160,271"
+incorrect,012_incorrect_true-lc:wcabo_pred-lc:muscabinso_p0.67.png,lc:wcabo,lc:muscabinso,0.6665,Q0194 - Arch Drawings/Q0194 - Arch Drawings_original.pdf#page=17,"6673,7777,163,271"
